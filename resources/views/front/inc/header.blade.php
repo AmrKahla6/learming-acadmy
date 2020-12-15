@@ -6,25 +6,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Etrain</title>
-    <link rel="icon" href="front/img/favicon.png">
+    <link rel="icon" href="{{ asset('front/img/favicon.png')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('front/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
-    <link rel="stylesheet" href="front/css/animate.css">
+    <link rel="stylesheet" href="{{ asset('front/css/animate.css')}}">
     <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="front/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('front/css/owl.carousel.min.css')}}">
     <!-- themify CSS -->
-    <link rel="stylesheet" href="front/css/themify-icons.css">
+    <link rel="stylesheet" href="{{ asset('front/css/themify-icons.css')}}">
     <!-- flaticon CSS -->
-    <link rel="stylesheet" href="front/css/flaticon.css">
+    <link rel="stylesheet" href="{{ asset('front/css/flaticon.css')}}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="front/css/magnific-popup.css">
+    <link rel="stylesheet" href="{{ asset('front/css/magnific-popup.css')}}">
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="front/css/slick.css">
+    <link rel="stylesheet" href="{{ asset('front/css/slick.css')}}">
     <!-- style CSS -->
-    <link rel="stylesheet" href="front/css/style.css">
+    <link rel="stylesheet" href="{{ asset('front/css/style.css')}}">
     <!-- custom CSS -->
-    <link rel="stylesheet" href="front/css/custom.css">
+    <link rel="stylesheet" href="{{ asset('front/css/custom.css')}}">
 
     @yield('styles')
 </head>
@@ -36,7 +36,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="index.html"> <img src="front/img/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="index.html"> <img src="{{ asset('front/img/logo.png')}}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">

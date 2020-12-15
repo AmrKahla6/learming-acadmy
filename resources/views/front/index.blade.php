@@ -1,4 +1,5 @@
 @extends('front.layout')
+
 @section('content')
     <!-- banner part start-->
     <section class="banner_part">
