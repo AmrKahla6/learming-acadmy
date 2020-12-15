@@ -87,7 +87,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="front/js/jquery.counterup.min.js"></script>
 <script src="front/js/waypoints.min.js"></script>
 <!-- custom js -->
-<script src="js/custom.js"></script>
+<script src="front/js/custom.js"></script>
 @yield('script')
 </body>
 

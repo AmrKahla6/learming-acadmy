@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="front/css/slick.css">
     <!-- style CSS -->
     <link rel="stylesheet" href="front/css/style.css">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="front/css/custom.css">
+
     @yield('styles')
 </head>
 
