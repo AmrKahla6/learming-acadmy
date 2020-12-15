@@ -17,7 +17,7 @@ class CreateCourseStudentTable extends Migration
             $table->id();
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('student_id');
-            $table->enum('status', ['approve', 'reject']);
+            $table->enum('status', ['approve', 'reject' , 'pending'])->default('pending');
 
 
             $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade')->onUpdate('cascade');
