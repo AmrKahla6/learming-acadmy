@@ -4,7 +4,7 @@
         <div class="row justify-content-between">
             <div class="col-sm-6 col-md-4 col-xl-3">
                 <div class="single-footer-widget footer_1">
-                    <a href="{{ route('front.homepage') }}"> <img src="{{asset('front/img/logo.png')}}" alt=""> </a>
+                    <a href="{{ route('front.homepage') }}"> <img src="{{asset('uploads/settings/' . $setting->logo)}}" alt=""> </a>
                     <p>But when shot real her. Chamber her one visite removal six
                         sending himself boys scot exquisite existend an </p>
                     <p>But when shot real her hamber her </p>
@@ -28,10 +28,9 @@
                         </div>
                     </form>
                     <div class="social_icon">
-                        <a href="#"> <i class="ti-facebook"></i> </a>
-                        <a href="#"> <i class="ti-twitter-alt"></i> </a>
-                        <a href="#"> <i class="ti-instagram"></i> </a>
-                        <a href="#"> <i class="ti-skype"></i> </a>
+                        <a href="{{ $setting->fb }}"> <i class="ti-facebook"></i> </a>
+                        <a href="{{ $setting->twitter }}"> <i class="ti-twitter-alt"></i> </a>
+                        <a href="{{ $setting->insta }}"> <i class="ti-instagram"></i> </a>
                     </div>
                 </div>
             </div>
@@ -39,9 +38,9 @@
                 <div class="single-footer-widget footer_2">
                     <h4>Contact us</h4>
                     <div class="contact_info">
-                        <p><span> Address :</span> Hath of it fly signs bear be one blessed after </p>
-                        <p><span> Phone :</span> +2 36 265 (8060)</p>
-                        <p><span> Email : </span>info@colorlib.com </p>
+                        <p><span> Address :@if($setting->adderess)  </span> {{ $setting->adderess . ', ' . $setting->city }} @else Cairo @endif  </p>
+                        <p><span> Phone :  @if($setting->phone)     </span> {{ $setting->phone }}    @else +2 36 265 (8060) @endif</p>
+                        <p><span> Email :  @if($setting->email)     </span>  {{ $setting->email }} @else info@colorlib.com @endif</p>
                     </div>
                 </div>
             </div>
