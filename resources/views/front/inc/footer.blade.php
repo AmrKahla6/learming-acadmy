@@ -5,15 +5,15 @@
             <div class="col-sm-6 col-md-4 col-xl-3">
                 <div class="single-footer-widget footer_1">
                     <a href="{{ route('front.homepage') }}"> <img src="{{asset('uploads/settings/' . $setting->logo)}}" alt=""> </a>
-                    <p>But when shot real her. Chamber her one visite removal six
+                    <p>@if($footer) {{ json_decode($footer->content)->desc }} @else But when shot real her. Chamber her one visite removal six
                         sending himself boys scot exquisite existend an </p>
-                    <p>But when shot real her hamber her </p>
+                    <p>But when shot real her hamber her @endif</p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-xl-4">
                 <div class="single-footer-widget footer_2">
-                    <h4>Newsletter</h4>
-                    <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
+                    <h4>@if($news) {{ json_decode($news->content , true)['title'] }} @else Newsletter @endif</h4>
+                    <p> @if($news) {{ json_decode($news->content)->desc }} @else Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.@endif
                     </p>
                     <form action="#">
                         <div class="form-group">

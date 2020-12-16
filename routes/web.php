@@ -12,9 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', 'Front\HomepageController@index')->name('front.homepage');
-Route::get('/cat/{id}', 'Front\CoursesController@cat')->name('front.cat');
-Route::get('/cat/{id}/course/{c_id}', 'Front\CoursesController@show')->name('front.show');
-Route::get('/contact', 'Front\ContactController@index')->name('front.contact');
+Route::group(['namespace' => 'Front'], function () {
+    Route::get('/', 'HomepageController@index')->name('front.homepage');
+    Route::get('/cat/{id}', 'CoursesController@cat')->name('front.cat');
+    Route::get('/cat/{id}/course/{c_id}', 'CoursesController@show')->name('front.show');
+    Route::get('/contact', 'ContactController@index')->name('front.contact');
+});
 

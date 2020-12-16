@@ -8,12 +8,12 @@
                 <div class="col-lg-6 col-xl-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h5>Every child yearns to learn</h5>
-                            <h1>Making Your Childs
-                                World Better</h1>
-                            <p>Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales
+                            <h5>@if($bannar) {{ json_decode($bannar->content)->title }} @else Every child yearns to learn @endif</h5>
+                            <h1>@if($bannar) {{ json_decode($bannar->content)->subtitle }} @else Making Your Childs
+                                World Better @endif</h1>
+                            <p> @if($bannar->content) {{ json_decode($bannar->content)->desc }} @else Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales
                                 his void unto last session for bite. Set have great you'll male grass yielding yielding
-                                man</p>
+                                man @endif</p>
                             {{-- <a href="#" class="btn_1">View Course </a>
                             <a href="#" class="btn_2">Get Started </a> --}}
                         </div>
@@ -30,9 +30,9 @@
             <div class="row">
                 <div class="col-sm-6 col-xl-3 align-self-center">
                     <div class="single_feature_text ">
-                        <h2>Awesome <br> Feature</h2>
-                        <p>Set have great you male grass yielding an yielding first their you're
-                            have called the abundantly fruit were man </p>
+                        <h2>  @if($awesome) {{ json_decode($awesome->content)->title }} @else Awesome <br> Feature @endif</h2>
+                        <p>@if($awesome) {{ json_decode($awesome->content)->desc }} @else Set have great you male grass yielding an yielding first their you're
+                            have called the abundantly fruit were man @endif</p>
                         {{-- <a href="#" class="btn_1">Read More</a> --}}
                     </div>
                 </div>
@@ -40,9 +40,9 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><i class="ti-layers"></i></span>
-                            <h4>Better Future</h4>
-                            <p>Set have great you male grasses yielding yielding first their to
-                                called deep abundantly Set have great you male</p>
+                            <h4> @if($future) {{ json_decode($future->content)->title }} @else Better Future @endif</h4>
+                            <p> @if($future) {{ json_decode($future->content)->desc }}  @else Set have great you male grasses yielding yielding first their to
+                                called deep abundantly Set have great you male @endif</p>
                         </div>
                     </div>
                 </div>
@@ -50,9 +50,9 @@
                     <div class="single_feature">
                         <div class="single_feature_part">
                             <span class="single_feature_icon"><i class="ti-new-window"></i></span>
-                            <h4>Qualified Trainers</h4>
-                            <p>Set have great you male grasses yielding yielding first their to called
-                                deep abundantly Set have great you male</p>
+                            <h4> @if($qualified) {{ json_decode($qualified->content)->title }} @else Qualified Trainers @endif</h4>
+                            <p> @if($qualified) {{ json_decode($qualified->content)->desc }} @else Set have great you male grasses yielding yielding first their to called
+                                deep abundantly Set have great you male @endif</p>
                         </div>
                     </div>
                 </div>
@@ -60,9 +60,9 @@
                     <div class="single_feature">
                         <div class="single_feature_part single_feature_part_2">
                             <span class="single_service_icon style_icon"><i class="ti-light-bulb"></i></span>
-                            <h4>Job Oppurtunity</h4>
-                            <p>Set have great you male grasses yielding yielding first their to called deep
-                                abundantly Set have great you male</p>
+                            <h4> @if($job) {{ json_decode($job->content)->title }} @else Job Oppurtunity @endif</h4>
+                            <p> @if($job) {{ json_decode($job->content)->desc }} @else Set have great you male grasses yielding yielding first their to called deep
+                                abundantly Set have great you male @endif </p>
                         </div>
                     </div>
                 </div>
@@ -105,8 +105,8 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5">
                     <div class="section_tittle text-center">
-                        <p>popular courses</p>
-                        <h2>Special Courses</h2>
+                        <p>  @if($courses_content) {{ json_decode($courses_content->content)->title }} @else popular courses @endif</p>
+                        <h2> @if($courses_content) {{ json_decode($courses_content->content)->subtitle }} @else Special Courses @endif</h2>
                     </div>
                 </div>
             </div>
@@ -146,8 +146,8 @@
             <div class="row justify-content-center">
                 <div class="col-xl-5">
                     <div class="section_tittle text-center">
-                        <p>tesimonials</p>
-                        <h2>Happy Students</h2>
+                        <p> @if($student) {{ json_decode($student->content)->title }} @else tesimonials @endif</p>
+                        <h2>@if($student) {{ json_decode($student->content)->subtitle }} @else Happy Students @endif</h2>
                     </div>
                 </div>
             </div>
