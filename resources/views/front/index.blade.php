@@ -14,8 +14,8 @@
                             <p>Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales
                                 his void unto last session for bite. Set have great you'll male grass yielding yielding
                                 man</p>
-                            <a href="#" class="btn_1">View Course </a>
-                            <a href="#" class="btn_2">Get Started </a>
+                            {{-- <a href="#" class="btn_1">View Course </a>
+                            <a href="#" class="btn_2">Get Started </a> --}}
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <h2>Awesome <br> Feature</h2>
                         <p>Set have great you male grass yielding an yielding first their you're
                             have called the abundantly fruit were man </p>
-                        <a href="#" class="btn_1">Read More</a>
+                        {{-- <a href="#" class="btn_1">Read More</a> --}}
                     </div>
                 </div>
                 <div class="col-sm-6 col-xl-3">
@@ -116,16 +116,16 @@
                         <div class="single_special_cource" >
                             <img class="img-thumbnail img-fluid" style="width:400px; height:200px;" src="uploads/courses/{{ $c->img }}" class="special_img" alt="">
                             <div class="special_cource_text">
-                                <a href="course-details.html" class="btn_4">{{$c->cat->name}}</a>
+                                <a href="{{ route('front.cat' , $c->cat->id) }}" class="btn_4">{{$c->cat->name}}</a>
                                 <h4>${{$c->price}}</h4>
-                                <a href="course-details.html"><h3>{{$c->name}}</h3></a>
+                                <a href="{{ route('front.show' , [$c->cat->id , $c->id]) }}"><h3>{{$c->name}}</h3></a>
                                 <p> {{ substr($c->small_desc , 0 ,  100)}}</p>
                                 <div class="author_info">
                                     <div class="author_img">
                                         <img class="img-thumbnail img-fluid" style="width:50px;height:50px;" src="uploads/trainers/{{ $c->trainer->img }}" alt="">
                                         <div class="author_info_text">
                                             <p>Conduct by:</p>
-                                            <h5><a href="#">{{$c->trainer->name}}</a></h5>
+                                            <h5>{{$c->trainer->name}}</h5>
                                         </div>
                                     </div>
                                 </div>

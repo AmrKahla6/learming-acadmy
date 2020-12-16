@@ -36,16 +36,16 @@
                     <div class="single_special_cource" >
                         <img class="img-thumbnail img-fluid" style="width:400px; height:200px;" src="{{ asset('uploads/courses/'. $c->img) }}" class="special_img" alt="">
                         <div class="special_cource_text">
-                            <a href="course-details.html" class="btn_4">{{$c->cat->name}}</a>
+                            <a href="{{ route('front.cat' , $c->cat->id) }}" class="btn_4">{{$c->cat->name}}</a>
                             <h4>${{$c->price}}</h4>
-                            <a href="course-details.html"><h3>{{$c->name}}</h3></a>
+                            <a href="{{ route('front.show' , [$c->cat->id , $c->id]) }}"><h3>{{$c->name}}</h3></a>
                             <p> {{ substr($c->small_desc , 0 ,  70)}}</p>
                             <div class="author_info">
                                 <div class="author_img">
                                     <img class="img-thumbnail img-fluid" style="width:50px;height:50px;" src="{{ asset('uploads/trainers/'. $c->trainer->img) }}" alt="">
                                     <div class="author_info_text">
                                         <p>Conduct by:</p>
-                                        <h5><a href="#">{{$c->trainer->name}}</a></h5>
+                                        <h5>{{$c->trainer->name}}</h5>
                                     </div>
                                 </div>
                             </div>

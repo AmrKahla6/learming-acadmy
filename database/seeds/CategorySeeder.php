@@ -12,13 +12,35 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $name = ['Programing' , 'English' , 'Medical' , 'Artists' , 'Accountants' , 'Designers'];
-        for ($i=0; $i < 5; $i++)
-        {
-            $array = [
-                'name' => $name[rand(0,3)],
-            ];
-            $cat = Category::create($array);
-        }
-}
+        Category::create([
+            'name'  => 'Programing',
+            'img'   => '1.png',
+        ]);
+
+        Category::create([
+            'name'  => 'Medical',
+            'img'   => '2.png',
+        ]);
+
+        Category::create([
+            'name'  => 'Accountants',
+            'img'   => '3.png',
+        ]);
+
+        Category::create([
+            'name'  => 'English',
+            'img'   => '4.png',
+        ]);
+
+        Category::create([
+            'name'  => 'Artists',
+            'img'   => '5.png',
+        ]);
+
+
+        Category::create([
+            'name'  => 'Designers',
+            'img'   => '6.png',
+        ]);
+    }
 }
