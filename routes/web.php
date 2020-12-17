@@ -19,6 +19,8 @@ Route::group(['namespace' => 'Front'], function () {
     Route::get('/contact', 'ContactController@index')->name('front.contact');
     Route::post('/message/newsletter', 'MessageController@newsletter')->name('front.message.newsletter');
     Route::post('/message/contact', 'MessageController@contact')->name('front.message.contact');
+    Route::post('/message/enroll', 'MessageController@enroll')->name('front.message.enroll');
+
 
 });
 
