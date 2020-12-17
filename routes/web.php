@@ -17,5 +17,8 @@ Route::group(['namespace' => 'Front'], function () {
     Route::get('/cat/{id}', 'CoursesController@cat')->name('front.cat');
     Route::get('/cat/{id}/course/{c_id}', 'CoursesController@show')->name('front.show');
     Route::get('/contact', 'ContactController@index')->name('front.contact');
+    Route::post('/message/newsletter', 'MessageController@newsletter')->name('front.message.newsletter');
+    Route::post('/message/contact', 'MessageController@contact')->name('front.message.contact');
+
 });
 

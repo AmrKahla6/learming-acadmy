@@ -15,14 +15,17 @@
                     <h4>@if($news) {{ json_decode($news->content , true)['title'] }} @else Newsletter @endif</h4>
                     <p> @if($news) {{ json_decode($news->content)->desc }} @else Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.@endif
                     </p>
-                    <form action="#">
+                    @include('partials._errors')
+                    @include('partials._session')
+                    <form action="{{ route('front.message.newsletter') }}" method="POST">
+                        @csrf
                         <div class="form-group">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder='Enter email address'
+                                <input type="email" name="email" class="form-control" placeholder='Enter email address'
                                     onfocus="this.placeholder = ''"
                                     onblur="this.placeholder = 'Enter email address'">
                                 <div class="input-group-append">
-                                    <button class="btn btn_1" type="button"><i class="ti-angle-right"></i></button>
+                                    <button class="btn btn_1" type="submit"><i class="ti-angle-right"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -87,6 +90,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{{ asset('front/js/waypoints.min.js')}}"></script>
 <!-- custom js -->
 <script src="{{ asset('front/js/custom.js')}}"></script>
+<!-- noty js -->
+<script src="{{ asset('front/js/noty.min.js') }}"></script>
 @yield('script')
 </body>
 

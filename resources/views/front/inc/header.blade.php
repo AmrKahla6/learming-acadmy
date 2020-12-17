@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="{{ asset('front/css/style.css')}}">
     <!-- custom CSS -->
     <link rel="stylesheet" href="{{ asset('front/css/custom.css')}}">
+   <!-- Noty -->
+   <link rel="stylesheet" href="{{ asset('front/css/noty.css') }}">
+
 
     @yield('styles')
 </head>
