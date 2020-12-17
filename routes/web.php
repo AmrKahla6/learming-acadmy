@@ -28,7 +28,10 @@ Route::group(['namespace' => 'Front'], function () {
 Route::group(['namespace' => 'Admin' , 'prefix' => 'dashboard'], function () {
     Route::get('/login', 'AuthController@login')->name('admin.login');
     Route::post('/do-login', 'AuthController@doLogin')->name('admin.doLogin');
-    Route::get('/logout', 'AuthController@logout')->name('admin.logout');
-    Route::get('/', 'HomeController@index')->name('admin.home');
+
+    Route::group(['middleware' => ['adminAuth:admin']], function () {
+        Route::get('/logout', 'AuthController@logout')->name('admin.logout');
+        Route::get('/', 'HomeController@index')->name('admin.home');
+    });
 });
 
