@@ -1,4 +1,4 @@
 @include('front.inc.header')
-    @yield('content')
     @include('partials._session')
+    @yield('content')
 @include('front.inc.footer')

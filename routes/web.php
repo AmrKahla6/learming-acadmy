@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Front-end Routes
 Route::group(['namespace' => 'Front'], function () {
     Route::get('/', 'HomepageController@index')->name('front.homepage');
     Route::get('/cat/{id}', 'CoursesController@cat')->name('front.cat');
@@ -20,7 +22,10 @@ Route::group(['namespace' => 'Front'], function () {
     Route::post('/message/newsletter', 'MessageController@newsletter')->name('front.message.newsletter');
     Route::post('/message/contact', 'MessageController@contact')->name('front.message.contact');
     Route::post('/message/enroll', 'MessageController@enroll')->name('front.message.enroll');
+});
 
-
+// Dashboard Routes
+Route::group(['namespace' => 'Admin'], function () {
+    Route::get('/dashboard', 'HomeController@index')->name('admin.home');
 });
 
