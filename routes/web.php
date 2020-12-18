@@ -33,8 +33,14 @@ Route::group(['namespace' => 'Admin' , 'prefix' => 'dashboard'], function () {
         Route::get('/logout', 'AuthController@logout')->name('admin.logout');
         Route::get('/', 'HomeController@index')->name('admin.home');
         Route::get('/', 'HomeController@index')->name('admin.home');
+
+        // Categories Routes
         Route::resource('/cats', 'CatController')->except('show' , 'destroy');
         Route::get('/cats/delete/{id}', 'CatController@delete')->name('cat.delete');
+
+        // Trainers Routes
+        Route::resource('/trainers', 'TrainerController')->except('show' , 'destroy');
+        Route::get('/trainers/delete/{id}', 'TrainerController@delete')->name('trainer.delete');
     });
 });
 

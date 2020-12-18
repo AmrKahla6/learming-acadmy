@@ -21,9 +21,14 @@
             <li class="nav-item active">
                <a class="nav-link" href="{{ route('admin.home') }}">Home</a>
             </li>
+
             <li class="nav-item active">
                <a class="nav-link" href="{{ route('cats.index') }}">Category</a>
             </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ route('trainers.index') }}">Trainers</a>
+             </li>
           </ul>
 
           <ul class="navbar-nav ml-auto">
