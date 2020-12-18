@@ -28,7 +28,11 @@
 
             <li class="nav-item active">
                 <a class="nav-link" href="{{ route('trainers.index') }}">Trainers</a>
-             </li>
+            </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
+            </li>
           </ul>
 
           <ul class="navbar-nav ml-auto">
