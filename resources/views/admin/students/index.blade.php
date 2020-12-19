@@ -27,6 +27,7 @@
                      <td>
                          <a href="{{ route('students.edit' , $student->id) }}" class="btn btn-sm btn-info">Edit</a>
                          <a href="{{ route('students.delete' , $student->id) }}" class="btn btn-sm btn-danger">Delete</a>
+                         <a href="{{ route('students.showCourses' , $student->id) }}" class="btn btn-sm btn-primary">Show Courses</a>
                      </td>
                 </tr>
             @endforeach

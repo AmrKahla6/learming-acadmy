@@ -49,6 +49,17 @@ Route::group(['namespace' => 'Admin' , 'prefix' => 'dashboard'], function () {
          // Courses Routes
          Route::resource('/students', 'StudentController')->except('show' , 'destroy');
          Route::get('/students/delete/{id}', 'StudentController@delete')->name('students.delete');
+         Route::get('/students/show-courses/{id}', 'StudentController@showCourses')->name('students.showCourses');
+
+         Route::get('/students/{id}/courses/{c_id}/approve', 'StudentController@approveCourses')->name('students.approveCourse');
+         Route::get('/students/{id}/courses/{c_id}/reject', 'StudentController@rejectCourses')->name('students.rejectCourse');
+
+         Route::get('/students/{id}/add-to-course', 'StudentController@addCourses')->name('students.addCourses');
+
+         Route::post('/students/{id}/add-to-course', 'StudentController@storeCourses')->name('students.storeCourses');
+
+
+
     });
 });
 
