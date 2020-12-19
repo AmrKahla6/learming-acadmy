@@ -45,6 +45,10 @@ Route::group(['namespace' => 'Admin' , 'prefix' => 'dashboard'], function () {
         // Courses Routes
         Route::resource('/courses', 'CourseController')->except('show' , 'destroy');
         Route::get('/courses/delete/{id}', 'CourseController@delete')->name('courses.delete');
+
+         // Courses Routes
+         Route::resource('/students', 'StudentController')->except('show' , 'destroy');
+         Route::get('/students/delete/{id}', 'StudentController@delete')->name('students.delete');
     });
 });
 

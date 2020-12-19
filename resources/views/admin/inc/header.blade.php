@@ -33,6 +33,10 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{ route('courses.index') }}">Courses</a>
             </li>
+
+            <li class="nav-item active">
+                <a class="nav-link" href="{{ route('students.index') }}">Students</a>
+            </li>
           </ul>
 
           <ul class="navbar-nav ml-auto">

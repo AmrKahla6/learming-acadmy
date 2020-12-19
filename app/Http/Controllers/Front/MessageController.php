@@ -48,13 +48,32 @@ public function enroll(Request $request)
         'course_id' => 'required|exists:courses,id',
     ]);
 
-    $student = Student::create([
-        'name'  => $data['name'],
-        'email' => $data['email'],
-        'spec'  => $data['spec'],
-    ]);
+    $old_student = Student::select('id')->where('email' , $data['email'])->first();
 
-    $student_id = $student->id;
+    if($old_student == null)
+    {
+
+        $student = Student::create([
+            'name'  => $data['name'],
+            'email' => $data['email'],
+            'spec'  => $data['spec'],
+        ]);
+        $student_id = $student->id;
+    }
+    else
+    {
+        $student_id = $old_student->id;
+
+        if($data['name'] != null)
+        {
+            $old_student->update(['name' => $data['name']]);
+        }
+
+        if($data['spec'] != null)
+        {
+            $old_student->update(['spec' => $data['spec']]);
+        }
+    }
 
     DB::table('course_student')->insert([
         'course_id'  => $data['course_id'],
